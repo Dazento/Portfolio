@@ -1,5 +1,125 @@
+/* Imports */
+@import '_variables.scss';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
+
+ul {
+  list-style: none;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color-main;
+  color: $content-color-main;
+  font-family: 'Nunito', sans-serif;
+}
+
+main {
+  transition: all .5s ease-in-out;
+}
+
+.container {
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $content-color-secondary;
+  border-radius: .5rem;
+}
+
+/* Text */
+h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.375rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: $content-color-secondary;
+}
+
+a {
+  font-size: 1rem;
+  color: $content-color-main;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  transition: all .1s ease-in;
+}
+
+.btn-primary {
+  background-color: rgba($color-main, .2);
+  border: 2px solid $color-main;
+
+  &:hover {
+    background-color: $color-main;
+  }
+}
+
+.btn-secondary {
+  background-color: rgba($color-secondary, .2);
+  border: 2px solid $color-secondary;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+/* skill */
+.skill {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+}
+
+.skill-sm {
+  padding: .375rem .625rem;
+  border-radius: 8px;
+}
+
+.skill-primary {
+  border: 2px solid $color-main;
+}
+
+.skill-secondary {
+  border: 2px solid $color-secondary;
+}
+
+/* Media Queries */
+// @media screen and (min-width: 991.98px) {}

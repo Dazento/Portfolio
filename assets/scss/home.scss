@@ -1,0 +1,348 @@
+@import 'header.scss';
+
+/* Globals */
+.h2__bar {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 2.5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: calc(100% - 1.25rem);
+    background-color: $background-color-secondary;
+    margin-left: 1.25rem;
+  }
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__intro {
+    width: 100%;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: $content-color-secondary;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2rem;
+    color: $color-main;
+    font-size: .875rem;
+    font-weight: normal;
+
+    i {
+      font-size: 2.5rem;
+    }
+
+    // img {
+    //   width: 30px;
+    //   margin-bottom: 10px;
+    // }
+  }
+}
+
+/* ---- A Propos Section ---- */
+.intro {
+  padding: 9.375rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.5rem, 2vw, 6rem);
+
+  &__description {
+
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    &__skills {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.25rem;
+
+      &__skill {
+        margin-right: .625rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    transition: all .3s ease-out;
+    margin-right: 25px;
+
+    &:hover {
+      &::before {
+        background-color: transparent;
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      background-color: rgba($color-main, .6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: .5rem;
+      transition: all .3s ease-out;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      border: 3px solid $color-main;
+      border-radius: .5rem;
+      left: 25px;
+      top: 25px;
+      transition: all .3s ease-out;
+    }
+
+    img {
+      width: 250px;
+      height: 300px;
+      border-radius: .5rem;
+      object-fit: cover;
+    }
+  }
+}
+
+/* ---- Projets Section ---- */
+.project__section {
+  padding: 6.25rem 0;
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &__project {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      &__content {
+        grid-area: 1 / 1 / -1 / 7;
+        grid-column: 1 / -1;
+        padding: 1rem;
+        z-index: 2;
+
+        &__project__type {
+          color: $color-main;
+          margin-bottom: 5px;
+        }
+
+        h3 {
+          margin-bottom: 1.25rem;
+
+          a {
+            font-size: clamp(1.25rem, 4vw, 2rem);
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &__skills {
+          margin: 1.25rem 0;
+          display: flex;
+          align-items: center;
+
+          &__skill {
+            margin-right: 5px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        &__links {
+          &__link {
+            font-size: 1.5rem;
+            color: $content-color-secondary;
+            transition: all .1s ease-in;
+
+            &:last-child {
+              margin-left: 5px;
+            }
+
+            &:hover {
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+
+      &__image {
+        grid-area: 1 / 6 / -1 / -1;
+        grid-column: 1 / -1;
+        border-radius: .5rem;
+        height: 100%;
+        position: relative;
+        opacity: .30;
+        transition: all .3s ease-out;
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          border-radius: .5rem;
+          cursor: pointer;
+
+          &::before {
+            content: "";
+            background-color: rgba($color-main, .6);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: .5rem;
+            transition: all .3s ease-out;
+            z-index: 3;
+          }
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: 100% 0;
+          border-radius: .5rem;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* ---- Compétences Section ---- */
+
+/* ---- Contact Section ---- */
+
+/* ---- Media Queries ---- */
+
+@media screen and (min-width: 767.98px) {
+
+  /* ---- A Propos Section ---- */
+  .intro {
+    flex-direction: row;
+
+    &__description {
+      width: 70%;
+    }
+
+    &__image {
+      position: relative;
+
+      &::before {
+        content: "";
+        background-color: rgba($color-main, .6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  /* ---- Projets Section ---- */
+  .project__section {
+
+    .projects {
+      gap: 9rem;
+
+      &__project {
+        &__content {
+          &__description {
+            padding: 2rem 3rem;
+            background-color: $background-color-secondary;
+            border-radius: .5rem;
+          }
+        }
+
+        &__image {
+          opacity: .8;
+
+          a:hover {
+            &::before {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      /* Right Project */
+      &__project--right .projects__project {
+
+        &__content {
+          text-align: right;
+          grid-column: 5 / -1;
+
+          &__skills {
+            justify-content: flex-end;
+          }
+        }
+
+        &__image {
+          grid-column: 1 / 8;
+        }
+      }
+
+      /* left Project */
+      &__project--left .projects__project {
+
+        &__content {
+          grid-column: 1 / 9;
+        }
+
+        &__image {
+          grid-column: 6 / -1;
+        }
+      }
+
+      /* Right Project */
+
+    }
+  }
+}

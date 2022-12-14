@@ -1,14 +1,167 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dylan Bury</title>
 
-  <link rel="stylesheet" href="">
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- HOME CSS -->
+  <link rel="stylesheet" href="assets/css/home.css">
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="assets/css/_header.css">
+
+  <!-- Library Icons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 </head>
-<body>
-  
+
+<body class="body">
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <h2>DB</h2>
+      </div>
+      <ul class="navbar__links">
+        <li class="navbar__links__link"><a href="#intro">À propos</a></li>
+        <li class="navbar__links__link"><a href="#project">Projets</a></li>
+        <li class="navbar__links__link"><a href="#">Compétences</a></li>
+        <li class="navbar__links__link"><a href="#">Contact</a></li>
+        <li><a href="" class="btn btn-primary">Mon CV</a></li>
+      </ul>
+      <button class="navbar__burger">
+        <span class="navbar__burger__bar navbar__burger__bar--active"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="hero__intro">
+          <h1>Dylan Bury</h1>
+          <h2>Développeur Web <span>Fullstack</span></h2>
+          <a class="btn btn-primary" href="#intro">En savoir plus</a>
+        </div>
+        <!-- <a class="hero__scroll" href=""><img src="assets/images/scroll-down.png" alt="scrolling  mouse">Scroll down</a> -->
+        <a class="hero__scroll" href="#intro"><i class="uil uil-mouse-alt"></i>Scroll down</a>
+      </section>
+
+      <!-- A Propos Section -->
+      <section id="intro" class="intro">
+        <div class="intro__description">
+          <h2 class="h2__bar">À propos</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus lacinia erat, sed congue arcu gravida
+            sit amet. Duis urna nibh, aliquam nec nibh quis, placerat posuere nibh. Proin convallis ipsum eu faucibus
+            venenatis. Donec luctus eu ipsum non ornare. Morbi sit amet magna id est euismod vestibulum nec semper.</p>
+          <ul class="intro__description__skills">
+            <li class="intro__description__skills__skill skill skill-primary">Symfony</li>
+            <li class="intro__description__skills__skill skill skill-primary">PHP</li>
+            <li class="intro__description__skills__skill skill skill-primary">JavaScript</li>
+          </ul>
+          <a class="btn btn-secondary" href="#skills">Compétences</a>
+        </div>
+        <div class="intro__image">
+          <img src="assets/images/profilImage.jpg" alt="Photo de profil de Dylan Bury">
+          <span class="intro__image__border"></span>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="project" class="project__section">
+        <h2 class="h2__bar">Projets</h2>
+        <div class="projects">
+
+          <!-- Cliks Project -->
+          <div class="projects__project projects__project--right">
+            <div class="projects__project__content">
+              <p class="projects__project__content__project__type">Projet personnel</p>
+              <h3>
+                <a href="https://cliks.dylanbury.com/" target="_blank">
+                  Cliks
+                </a>
+              </h3>
+              <div class="projects__project__content__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus lacinia erat, sed congue arcu
+                  gravida
+                  sit amet. Duis urna nibh, aliquam nec nibh quis, placerat posuere nibh. Proin convallis ipsum eu
+                  faucibus
+                  venenatis. Donec luctus eu ipsum non ornare. Morbi sit amet magna id est euismod vestibulum nec
+                  semper.
+                </p>
+              </div>
+              <ul class="projects__project__content__skills">
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">Twig</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">JS</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">SCSS</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">Symfony</li>
+              </ul>
+              <div class="projects__project__content__links">
+                <a class="projects__project__content__links__link" target="_blank"
+                  href="https://github.com/Dazento/cliks"><i class="uil uil-github-alt"></i></a>
+                <a class="projects__project__content__links__link" target="_blank"
+                  href="https://cliks.dylanbury.com/"><i class="uil uil-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="projects__project__image">
+              <a href="https://cliks.dylanbury.com/" target="_blank">
+                <img src="assets/images/cliks.png" alt="Image du site Cliks">
+              </a>
+            </div>
+          </div>
+
+          <!-- Dites cheese Project -->
+          <div class="projects__project projects__project--left">
+            <div class="projects__project__content">
+              <p class="projects__project__content__project__type">Projet freelance</p>
+              <h3>
+                <a href="https://ditescheese.fr/" target="_blank">
+                  Ditescheese
+                </a>
+              </h3>
+              <div class="projects__project__content__description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus lacinia erat, sed congue arcu
+                  gravida
+                  sit amet. Duis urna nibh, aliquam nec nibh quis, placerat posuere nibh. Proin convallis ipsum eu
+                  faucibus
+                  venenatis. Donec luctus eu ipsum non ornare. Morbi sit amet magna id est euismod vestibulum nec
+                  semper.
+                </p>
+              </div>
+              <ul class="projects__project__content__skills">
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">Twig</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">JS</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">SCSS</li>
+                <li class="projects__project__content__skills__skill skill-sm skill-secondary">Symfony</li>
+              </ul>
+              <div class="projects__project__content__links">
+                <a class="projects__project__content__links__link" target="_blank"
+                  href="https://github.com/Dazento/ditescheese"><i class="uil uil-github-alt"></i></a>
+                <a class="projects__project__content__links__link" target="_blank" href="https://ditescheese.fr/"><i
+                    class="uil uil-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="projects__project__image">
+              <a href="https://ditescheese.fr/" target="_blank">
+                <img src="assets/images/ditescheese.png" alt="Image du site Cliks">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+
+      </section>
+    </div>
+  </main>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
