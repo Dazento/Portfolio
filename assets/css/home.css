@@ -145,6 +145,9 @@
   color: #94A1B2;
   margin-bottom: 1.2rem;
 }
+.hero__intro h2 span {
+  color: rgb(127, 90, 240);
+}
 .hero__scroll {
   position: absolute;
   display: flex;
@@ -321,6 +324,73 @@
 }
 
 /* ---- Compétences Section ---- */
+.skills-section {
+  padding: 2.5rem 0;
+}
+.skills-section .skills-switch {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+.skills-section .skills-switch .skills__categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.skills-section .skills-switch .skills__categories__bar--active {
+  background-color: rgba(127, 90, 240, 0.15);
+  border-bottom: 4px solid rgb(127, 90, 240);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+.skills-section .skills-switch .skills__categories::before {
+  content: "";
+  background-color: #242629;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.skills-section .skills-switch .skills__categories a {
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.skills-section .skills-switch .skills__categories a:hover {
+  background-color: rgba(127, 90, 240, 0.15);
+}
+.skills-section .skills__cards {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.skills-section .skills__cards__card {
+  width: 125px;
+  height: 100px;
+  background-color: #242629;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+}
+.skills-section .skills__cards__card img {
+  width: 30px;
+}
+.skills-section .active .skills__cards {
+  display: flex;
+}
+
 /* ---- Contact Section ---- */
 /* ---- Media Queries ---- */
 @media screen and (min-width: 767.98px) {
@@ -346,9 +416,13 @@
   /* ---- Projets Section ---- */
   .project__section .projects {
     gap: 9rem;
+    /* Project */
     /* Right Project */
     /* left Project */
     /* Right Project */
+  }
+  .project__section .projects__project__content__skills__skill {
+    margin-right: 0.8rem;
   }
   .project__section .projects__project__content__description {
     padding: 2rem 3rem;
@@ -376,6 +450,10 @@
   }
   .project__section .projects__project--left .projects__project__image {
     grid-column: 6/-1;
+  }
+  /* ---- Compétences Section ---- */
+  .skills-section {
+    padding: 8.125rem 0;
   }
 }
 

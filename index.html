@@ -45,7 +45,8 @@
       <section id="hero" class="hero">
         <div class="hero__intro">
           <h1>Dylan Bury</h1>
-          <h2>Développeur Web <span>Fullstack</span></h2>
+          <h2>Développeur Web <span class="typeWriter" data-checkVisible="true" data-speed="2" data-dltSpeed="false"
+              data-text='["Frontend", "Backend", "Fullstack"]'></span></h2>
           <a class="btn btn-primary" href="#intro">En savoir plus</a>
         </div>
         <!-- <a class="hero__scroll" href=""><img src="assets/images/scroll-down.png" alt="scrolling  mouse">Scroll down</a> -->
@@ -156,11 +157,85 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="skills">
+      <section id="skills" class="skills-section">
+        <div class="skills-switch">
+          <div class="skills__categories">
+            <a id="frontendBtn" class="skills__categories__category">
+              <h3>Frontend</h3>
+            </a>
+            <a id="backendBtn" class="skills__categories__category">
+              <h3>Backend</h3>
+            </a>
+            <a id="designBtn" class="skills__categories__category">
+              <h3>Design</h3>
+            </a>
+            <div id="switch" class="skills__categories__bar--active"></div>
+          </div>
+        </div>
 
+        <div>
+          <div id="frontendCard" class="skills active">
+            <div class="skills__cards">
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/html.svg" alt="Logo html">
+                <p>HTML</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/css.svg" alt="Logo CSS">
+                <p>CSS</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/sass.svg" alt="Logo SCSS">
+                <p>SCSS</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/js.svg" alt="Logo Javascript">
+                <p>Javascript</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/gsap.svg" alt="Logo GSAP">
+                <p>GSAP</p>
+              </div>
+            </div>
+          </div>
+          <div id="backendCard" class="skills">
+            <div class="skills__cards">
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/symfony.svg" alt="Logo Symfony">
+                <p>Symfony</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/php.svg" alt="Logo PHP">
+                <p>PHP</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/sql.svg" alt="Logo SQL">
+                <p>SQL</p>
+              </div>
+            </div>
+          </div>
+          <div id="designCard" class="skills">
+            <div class="skills__cards">
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/figma.svg" alt="Logo Figma">
+                <p>Figma</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/design.svg" alt="Logo UI design">
+                <p>UI design</p>
+              </div>
+              <div class="skills__cards__card">
+                <img src="assets/images/skills/design.svg" alt="Logo UX design">
+                <p>UX design</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
+  <!-- TypeLigther.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
