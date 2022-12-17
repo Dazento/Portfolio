@@ -15,12 +15,14 @@ ul {
 /* Global Styles */
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
   background-color: #16161A;
   color: #FFFFFE;
   font-family: "Nunito", sans-serif;
+  position: relative;
 }
 
 main {

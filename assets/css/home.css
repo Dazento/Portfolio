@@ -110,7 +110,7 @@
     display: none;
   }
 }
-/* Globals */
+/* ---- Globals ---- */
 .h2__bar {
   display: flex;
   align-items: center;
@@ -127,6 +127,41 @@
   margin-left: 1.25rem;
 }
 
+.cursorr {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFFFFE;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) width, 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) height;
+}
+.cursorr.cursor-hover {
+  mix-blend-mode: soft-light;
+  width: 60px;
+  height: 60px;
+  background-color: #FFFFFE;
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(127, 90, 240);
+  position: absolute;
+  pointer-events: none;
+  transition: 0.1s top, 0.1s left, 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) width, 0.3s cubic-bezier(0.65, 0.05, 0.36, 1) height;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.cursor-follower.cursor-hover {
+  width: 60px;
+  height: 60px;
+  transition: none;
+}
+
 /* ---- Hero Section ---- */
 .hero {
   height: 100vh;
@@ -134,6 +169,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .hero__intro {
   width: 100%;
@@ -360,7 +396,6 @@
 }
 .skills-section .skills-switch .skills__categories a {
   padding: 0.625rem 0.7rem;
-  cursor: pointer;
   z-index: 2;
 }
 .skills-section .skills-switch .skills__categories a:hover {

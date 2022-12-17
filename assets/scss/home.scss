@@ -1,6 +1,6 @@
 @import 'header.scss';
 
-/* Globals */
+/* ---- Globals ---- */
 .h2__bar {
   display: flex;
   align-items: center;
@@ -18,6 +18,44 @@
   }
 }
 
+// Cursor
+.cursorr {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $content-color-main;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: .3s cubic-bezier(0.65, 0.05, 0.36, 1) width, .3s cubic-bezier(0.65, 0.05, 0.36, 1) height;
+
+  &.cursor-hover {
+    mix-blend-mode: soft-light;
+    width: 60px;
+    height: 60px;
+    background-color: $content-color-main;
+  }
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid $color-main;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.1s top, 0.1s left, .3s cubic-bezier(0.65, 0.05, 0.36, 1) width, .3s cubic-bezier(0.65, 0.05, 0.36, 1) height;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  &.cursor-hover {
+    width: 60px;
+    height: 60px;
+    transition: none;
+  }
+}
+
 /* ---- Hero Section ---- */
 .hero {
   height: 100vh;
@@ -25,6 +63,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   &__intro {
     width: 100%;
@@ -298,7 +337,6 @@
 
       a {
         padding: .625rem .7rem;
-        cursor: pointer;
         z-index: 2;
 
         &:hover {
@@ -323,7 +361,6 @@
       position: absolute;
       left: -30%;
       width: 100%;
-
 
       &__card {
         width: 125px;

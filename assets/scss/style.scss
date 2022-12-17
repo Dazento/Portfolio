@@ -19,12 +19,14 @@ ul {
 /* Global Styles */
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
   background-color: $background-color-main;
   color: $content-color-main;
   font-family: 'Nunito', sans-serif;
+  position: relative;
 }
 
 main {
@@ -36,7 +38,6 @@ main {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 ::-webkit-scrollbar {

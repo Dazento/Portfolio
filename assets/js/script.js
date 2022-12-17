@@ -10,6 +10,39 @@ toggleMenu = () => {
 }
 toggleMenu();
 
+/* ----- Cursor ----- */
+const cursor = document.querySelector('.cursorr');
+const cursorFollower = document.querySelector('.cursor-follower');
+
+addCursorHover = () => {
+  cursor.classList.add('cursor-hover');
+  cursorFollower.classList.add('cursor-hover');
+}
+
+removeCursorHover = () => {
+  cursor.classList.remove('cursor-hover');
+  cursorFollower.classList.remove('cursor-hover');
+}
+
+// Update position of cursor
+document.addEventListener('mousemove', (e) => {
+  cursor.style.top = e.pageY + 'px';
+  cursor.style.left = e.pageX + 'px';
+  cursorFollower.style.top = e.pageY + 'px';
+  cursorFollower.style.left = e.pageX + 'px';
+});
+
+// add Hover on all btn
+document.querySelectorAll('a, .intro__image').forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    addCursorHover();
+  })
+  btn.addEventListener('mouseleave', () => {
+    removeCursorHover();
+  })
+});
+
+
 /* ----- Skills Switcher ----- */
 // var btn
 const frontendBtn = document.getElementById('frontendBtn');
