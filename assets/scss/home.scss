@@ -283,7 +283,7 @@
         left: 0;
         bottom: 0;
         z-index: 1;
-        transition: all .3s ease-out;
+        transition: all 0.5s ease-in-out;
       }
 
       &::before {
@@ -297,7 +297,7 @@
       }
 
       a {
-        padding: .625rem 1rem;
+        padding: .625rem .7rem;
         cursor: pointer;
         z-index: 2;
 
@@ -309,12 +309,21 @@
   }
 
   .skills {
+    position: relative;
+    overflow: hidden;
+
     &__cards {
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
       gap: 0.625rem;
+      transition: all 0.5s ease-in-out;
+      transform: translateX(-50%);
+      position: absolute;
+      left: -30%;
+      width: 100%;
+
 
       &__card {
         width: 125px;
@@ -340,12 +349,48 @@
 
   .active .skills {
     &__cards {
-      display: flex;
+      position: relative;
+      left: 50%;
     }
   }
 }
 
 /* ---- Contact Section ---- */
+.contact {
+  text-align: center;
+  padding: 6.25rem 0;
+
+  &__h2 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $background-color-secondary;
+      margin-right: 1.25rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $background-color-secondary;
+      margin-left: 1.25rem;
+    }
+  }
+
+  p {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+}
 
 /* ---- Media Queries ---- */
 
@@ -435,14 +480,19 @@
           grid-column: 6 / -1;
         }
       }
-
-      /* Right Project */
-
     }
   }
 
   /* ---- Compétences Section ---- */
   .skills-section {
-    padding: 8.125rem 0;
+    padding: 8.125rem 0 6rem;
+
+    .skills-switch {
+      .skills__categories {
+        a {
+          padding: .625rem 1.2rem;
+        }
+      }
+    }
   }
 }

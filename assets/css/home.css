@@ -347,7 +347,7 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 .skills-section .skills-switch .skills__categories::before {
   content: "";
@@ -359,19 +359,28 @@
   left: 0;
 }
 .skills-section .skills-switch .skills__categories a {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 0.7rem;
   cursor: pointer;
   z-index: 2;
 }
 .skills-section .skills-switch .skills__categories a:hover {
   background-color: rgba(127, 90, 240, 0.15);
 }
+.skills-section .skills {
+  position: relative;
+  overflow: hidden;
+}
 .skills-section .skills__cards {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.625rem;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-50%);
+  position: absolute;
+  left: -30%;
+  width: 100%;
 }
 .skills-section .skills__cards__card {
   width: 125px;
@@ -388,10 +397,43 @@
   width: 30px;
 }
 .skills-section .active .skills__cards {
-  display: flex;
+  position: relative;
+  left: 50%;
 }
 
 /* ---- Contact Section ---- */
+.contact {
+  text-align: center;
+  padding: 6.25rem 0;
+}
+.contact__h2 {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.contact__h2::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #242629;
+  margin-right: 1.25rem;
+}
+.contact__h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #242629;
+  margin-left: 1.25rem;
+}
+.contact p {
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
 /* ---- Media Queries ---- */
 @media screen and (min-width: 767.98px) {
   /* ---- A Propos Section ---- */
@@ -419,7 +461,6 @@
     /* Project */
     /* Right Project */
     /* left Project */
-    /* Right Project */
   }
   .project__section .projects__project__content__skills__skill {
     margin-right: 0.8rem;
@@ -453,7 +494,10 @@
   }
   /* ---- Compétences Section ---- */
   .skills-section {
-    padding: 8.125rem 0;
+    padding: 8.125rem 0 6rem;
+  }
+  .skills-section .skills-switch .skills__categories a {
+    padding: 0.625rem 1.2rem;
   }
 }
 
