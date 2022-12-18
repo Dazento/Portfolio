@@ -117,6 +117,20 @@
     display: none;
   }
 }
+.footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer a {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  transition: all 0.3s;
+}
+.footer a:hover {
+  color: rgb(127, 90, 240);
+}
+
 /* ---- Globals ---- */
 .h2__bar {
   display: flex;

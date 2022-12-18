@@ -1,0 +1,15 @@
+.footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    transition: all .3s;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+}
