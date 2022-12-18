@@ -90,6 +90,7 @@ a {
   border: 2px solid $color-main;
 
   &:hover {
+    cursor: none;
     background-color: $color-main;
   }
 }
@@ -99,6 +100,7 @@ a {
   border: 2px solid $color-secondary;
 
   &:hover {
+    cursor: none;
     background-color: $color-secondary;
   }
 }

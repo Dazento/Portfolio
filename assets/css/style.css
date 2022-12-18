@@ -86,6 +86,7 @@ a {
   border: 2px solid rgb(127, 90, 240);
 }
 .btn-primary:hover {
+  cursor: none;
   background-color: rgb(127, 90, 240);
 }
 
@@ -94,6 +95,7 @@ a {
   border: 2px solid rgb(44, 182, 125);
 }
 .btn-secondary:hover {
+  cursor: none;
   background-color: rgb(44, 182, 125);
 }
 

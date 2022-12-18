@@ -141,6 +141,8 @@
     margin-right: 25px;
 
     &:hover {
+      cursor: none;
+
       &::before {
         background-color: transparent;
       }
@@ -220,6 +222,7 @@
 
           &:hover {
             text-decoration: underline;
+            cursor: none;
           }
         }
 
@@ -248,6 +251,7 @@
             }
 
             &:hover {
+              cursor: none;
               color: $color-secondary;
             }
           }
@@ -340,6 +344,7 @@
         z-index: 2;
 
         &:hover {
+          cursor: none;
           background-color: rgba($color-main, .15);
         }
       }
@@ -482,6 +487,8 @@
           opacity: .8;
 
           a:hover {
+            cursor: none;
+
             &::before {
               background-color: transparent;
             }
