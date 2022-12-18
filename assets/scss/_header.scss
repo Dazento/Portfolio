@@ -11,6 +11,15 @@
   padding: 0 1rem;
   z-index: 1000;
 
+  &__logo {
+    width: fit-content;
+    height: fit-content;
+
+    img {
+      width: 40px;
+    }
+  }
+
   &__links {
     overflow: hidden;
     position: absolute;
