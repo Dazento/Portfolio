@@ -19,7 +19,7 @@ gsap.to('.intro div', {
 gsap.to('.projects__project--right', {
   scrollTrigger: {
     trigger: '.projects__project--right',
-    end: 'top',
+    end: 'center center',
     scrub: 1
   },
   x: 0,
@@ -30,10 +30,19 @@ gsap.to('.projects__project--right', {
 gsap.to('.projects__project--left', {
   scrollTrigger: {
     trigger: '.projects__project--left',
-    end: 'top',
+    end: 'center center',
     scrub: 1
   },
   x: 0,
   opacity: 1,
-  duration: 1
+});
+
+gsap.to('.skills-switch', {
+  scrollTrigger: {
+    trigger: '.skills-switch',
+    end: 'center center',
+    scrub: 1
+  },
+  y: 0,
+  opacity: 1,
 });

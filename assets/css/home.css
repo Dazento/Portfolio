@@ -35,13 +35,12 @@
   transform: translateX(100%);
   filter: none;
 }
-.navbar__links__link {
-  opacity: 0;
-  transform: translateY(-100%);
-}
 .navbar__links__link a {
+  display: block;
   padding: 0.8rem 1rem;
   white-space: nowrap;
+  border-radius: 8px;
+  cursor: none;
 }
 .navbar__links__link a:hover {
   background-color: rgb(127, 90, 240);
@@ -115,6 +114,8 @@
   }
   .navbar__links__link {
     margin-right: 1rem;
+    opacity: 0;
+    transform: translateY(-100%);
   }
   .navbar__burger {
     display: none;
@@ -425,6 +426,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
+  transform: translateY(-45%);
+  opacity: 0;
 }
 .skills-section .skills-switch .skills__categories {
   display: flex;
@@ -469,7 +472,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.625rem;
-  transition: all 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
   transform: translateX(-50%);
   position: absolute;
   left: -30%;

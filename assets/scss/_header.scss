@@ -38,14 +38,12 @@
     transform: translateX(100%);
     filter: none;
 
-    &__link {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-
     &__link a {
+      display: block;
       padding: .8rem 1rem;
       white-space: nowrap;
+      border-radius: 8px;
+      cursor: none;
 
       &:hover {
         background-color: $color-main;
@@ -133,6 +131,8 @@
 
       &__link {
         margin-right: 1rem;
+        opacity: 0;
+        transform: translateY(-100%);
       }
     }
 

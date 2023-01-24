@@ -19,6 +19,7 @@ ul {
 html {
   scroll-behavior: smooth;
   cursor: none;
+
 }
 
 body {
@@ -30,6 +31,7 @@ body {
 
 main {
   transition: all .5s ease-in-out;
+  overflow: hidden;
 }
 
 .container {

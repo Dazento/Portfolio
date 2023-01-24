@@ -88,6 +88,7 @@
         color: $color-main;
       }
     }
+
     a {
       clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
       opacity: 0;
@@ -106,7 +107,7 @@
     font-weight: normal;
     opacity: 0;
     transform: translateY(100%);
-    
+
     i {
       animation: mouseScroll 2s ease-in-out infinite;
       font-size: 2.5rem;
@@ -158,7 +159,7 @@
     margin-right: 25px;
     transform: translateX(50%);
     opacity: 0;
-    
+
     &:hover {
       cursor: none;
 
@@ -318,10 +319,12 @@
         }
       }
     }
+
     &__project--right {
       transform: translateX(45%);
       opacity: 0;
     }
+
     &__project--left {
       transform: translateX(-45%);
       opacity: 0;
@@ -333,11 +336,15 @@
 .skills-section {
   padding: 2.5rem 0;
 
+
   .skills-switch {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
+
+    transform: translateY(-45%);
+    opacity: 0;
 
     .skills__categories {
       display: flex;
@@ -388,7 +395,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 0.625rem;
-      transition: all 0.5s ease-in-out;
+      transition: left 0.5s ease-in-out;
       transform: translateX(-50%);
       position: absolute;
       left: -30%;
@@ -404,6 +411,7 @@
         row-gap: 0.625rem;
         align-items: center;
         justify-content: center;
+
 
         img {
           width: 30px;
