@@ -69,17 +69,29 @@
   &__intro {
     width: 100%;
 
+
     h1 {
       margin-bottom: 1rem;
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      opacity: 0;
+      transform: translateY(50%);
     }
 
     h2 {
       color: $content-color-secondary;
       margin-bottom: 1.2rem;
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      opacity: 0;
+      transform: translateY(50%);
 
       span {
         color: $color-main;
       }
+    }
+    a {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+      opacity: 0;
+      transform: translateY(50%);
     }
   }
 
@@ -92,8 +104,11 @@
     color: $color-main;
     font-size: .875rem;
     font-weight: normal;
-
+    opacity: 0;
+    transform: translateY(100%);
+    
     i {
+      animation: mouseScroll 2s ease-in-out infinite;
       font-size: 2.5rem;
     }
 
@@ -114,6 +129,8 @@
   gap: clamp(2.5rem, 2vw, 6rem);
 
   &__description {
+    transform: translateX(-60%);
+    opacity: 0;
 
     p {
       margin-bottom: 1.25rem;
@@ -139,7 +156,9 @@
     display: flex;
     transition: all .3s ease-out;
     margin-right: 25px;
-
+    transform: translateX(50%);
+    opacity: 0;
+    
     &:hover {
       cursor: none;
 
@@ -298,6 +317,14 @@
           left: 0;
         }
       }
+    }
+    &__project--right {
+      transform: translateX(45%);
+      opacity: 0;
+    }
+    &__project--left {
+      transform: translateX(-45%);
+      opacity: 0;
     }
   }
 }
@@ -538,5 +565,21 @@
         }
       }
     }
+  }
+}
+
+
+/* ---- KEYFRAMES ---- */
+@keyframes mouseScroll {
+  0% {
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-25%);
   }
 }

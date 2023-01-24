@@ -9,6 +9,8 @@
   height: 96px;
   padding: 0 1rem;
   z-index: 1000;
+  backdrop-filter: blur(4px);
+  background-color: rgba(22, 22, 26, 0.2);
 }
 .navbar__logo {
   width: fit-content;
@@ -33,11 +35,12 @@
   transform: translateX(100%);
   filter: none;
 }
+.navbar__links__link {
+  opacity: 0;
+  transform: translateY(-100%);
+}
 .navbar__links__link a {
-  display: block;
   padding: 0.8rem 1rem;
-  border-radius: 8px;
-  transition: all 0.1s ease-in;
   white-space: nowrap;
 }
 .navbar__links__link a:hover {
@@ -198,13 +201,24 @@
 }
 .hero__intro h1 {
   margin-bottom: 1rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(50%);
 }
 .hero__intro h2 {
   color: #94A1B2;
   margin-bottom: 1.2rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(50%);
 }
 .hero__intro h2 span {
   color: rgb(127, 90, 240);
+}
+.hero__intro a {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateY(50%);
 }
 .hero__scroll {
   position: absolute;
@@ -215,8 +229,11 @@
   color: rgb(127, 90, 240);
   font-size: 0.875rem;
   font-weight: normal;
+  opacity: 0;
+  transform: translateY(100%);
 }
 .hero__scroll i {
+  animation: mouseScroll 2s ease-in-out infinite;
   font-size: 2.5rem;
 }
 
@@ -228,6 +245,10 @@
   align-items: center;
   justify-content: center;
   gap: clamp(2.5rem, 2vw, 6rem);
+}
+.intro__description {
+  transform: translateX(-60%);
+  opacity: 0;
 }
 .intro__description p {
   margin-bottom: 1.25rem;
@@ -248,6 +269,8 @@
   display: flex;
   transition: all 0.3s ease-out;
   margin-right: 25px;
+  transform: translateX(50%);
+  opacity: 0;
 }
 .intro__image:hover {
   cursor: none;
@@ -383,6 +406,14 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+.project__section .projects__project--right {
+  transform: translateX(45%);
+  opacity: 0;
+}
+.project__section .projects__project--left {
+  transform: translateX(-45%);
+  opacity: 0;
 }
 
 /* ---- Compétences Section ---- */
@@ -563,6 +594,18 @@
   }
   .skills-section .skills-switch .skills__categories a {
     padding: 0.625rem 1.2rem;
+  }
+}
+/* ---- KEYFRAMES ---- */
+@keyframes mouseScroll {
+  0% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-25%);
   }
 }
 

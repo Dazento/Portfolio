@@ -38,11 +38,13 @@
     transform: translateX(100%);
     filter: none;
 
+    &__link {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+
     &__link a {
-      display: block;
       padding: .8rem 1rem;
-      border-radius: 8px;
-      transition: all .1s ease-in;
       white-space: nowrap;
 
       &:hover {
