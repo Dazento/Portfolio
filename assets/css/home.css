@@ -283,17 +283,6 @@
   top: 0;
   left: 0;
 }
-.intro__image::before {
-  content: "";
-  background-color: rgba(127, 90, 240, 0.6);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-out;
-}
 .intro__image::after {
   content: "";
   z-index: -1;
@@ -542,15 +531,6 @@
   .intro__image {
     position: relative;
   }
-  .intro__image::before {
-    content: "";
-    background-color: rgba(127, 90, 240, 0.6);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
   /* ---- Projets Section ---- */
   .project__section .projects {
     gap: 9rem;
@@ -567,7 +547,10 @@
     border-radius: 0.5rem;
   }
   .project__section .projects__project__image {
-    opacity: 0.8;
+    opacity: 1;
+  }
+  .project__section .projects__project__image a:before {
+    content: none;
   }
   .project__section .projects__project__image a:hover {
     cursor: none;
